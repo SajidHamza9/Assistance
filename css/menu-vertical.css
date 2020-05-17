@@ -1,0 +1,148 @@
+ :root{
+  --color1:#C27624;
+  --color2:#34B1E4;
+  --color3:#EE7419;
+  --color4:#A5C724;
+}
+body {
+  overflow-x: hidden;
+  background-color: #F4F4F4 !important;
+
+}
+
+#menu-vertical {
+  min-height: 100vh;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  text-align: center;
+  display: none;
+  background-color: #FFF !important;
+  display: block;
+
+}
+
+#menu-vertical .menu-title {
+  padding: 0.875rem 1.25rem;
+  font-size: 2rem;
+  font-family: 'Lalezar', cursive;
+  color: var(--color4);
+  border-bottom: 2px solid var(--color4);
+  border-top: 2px solid var(--color4);
+
+}
+
+
+#menu-vertical .list-group {
+  width: 15rem;
+}
+
+#menu-vertical .list-group-item{
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  background-color: #F4F4F4 !important;
+  font-weight: bold;
+}
+#menu-vertical .list-group-item:hover{
+  color: var(--color4) !important;
+  border-left: 5px solid var(--color4) !important;
+  border-right: 5px solid var(--color4) !important;
+  text-decoration: none;
+
+}
+
+#page-content {
+  min-width: 100vw;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#menu-content.toggled #menu-vertical {
+  margin-left: 0;
+}
+
+
+.btn1{
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  background:var(--color4);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+  margin: 1rem;
+  align-self: flex-end;
+}
+.btn1 span{
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+.btn1.click span:before{
+  content: '\f0c9';
+}
+@media(max-width :768px )
+{
+  #page-content {
+    min-width: 100vw;
+  } 
+  .btn1{
+    width: 100%;
+    margin-left:0 ;
+    margin-right: 0;
+  } 
+  .btn1 span::before{
+    content: '\f0c9';
+
+  } 
+  .btn1.click span:before{
+    content: '\f00d';
+  }
+  #menu-vertical{
+    display: none;
+  }
+  #menu-content{
+    flex-direction: column !important;
+  }
+  #menu-vertical {
+    min-height: 100%;
+    margin-left:0;
+    display: none;
+    text-align: center;
+  }
+  #menu-vertical .list-group{
+    width: 100%;
+  }
+}
+
+#myTab .active{
+  color: var(--color4) !important;
+}
+#myTab{
+  direction: rtl;
+  align-self: center;
+}
+
+#menu-content{
+  flex-direction: row-reverse;
+}
+
+#doc .pdf a {
+   text-decoration: none;
+   color: #000;
+}
+
+
+.current1{
+  color: var(--color4) !important;
+  border-left: 5px solid var(--color4) !important;
+  border-right: 5px solid var(--color4) !important;
+  text-decoration: none;
+}
+
+
+
